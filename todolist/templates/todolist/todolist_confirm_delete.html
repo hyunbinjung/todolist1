@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
+                <div class="card-body py-4 px-4 px-md-5">
+      
+                  <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                    <i class="fas fa-check-square me-1"></i>
+                    <u>My Todo Delete ㅜㅜ</u>
+                  </p>
+                  <form action="#" method="post">
+                    {%csrf_token%} 
+                    {{object}}를 삭제하시겠습니까?<br>
+                    {{object.todo_title}}에 들어있는 항목<br>
+                    URL:  <a href="{{object.todo_url}}">{{object.todo_url}}</a><br>
+                    중요순위:  {{object.todo_priority}}순위<br>
+                    완료여부:  {{object.todo_completion}} <br>
+                    <button class="btn btn-info">삭제하기</button>
+                
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+</body>
+</html>

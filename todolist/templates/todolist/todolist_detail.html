@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <section class="vh-100" style="background-color: #e2d5de;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+      
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+      
+                  <h1 class="mb-3">{{todolist.todo_title}}의 세부사항입니다.</h1>
+      
+                  <form class="d-flex justify-content-center align-items-center mb-4">
+                    <div class="form-outline flex-fill">
+                     {{todolist.todo_title}} 이외 항목을 추가해보세요.</label>
+                      <button type="submit" class="btn btn-dark btn-lg ms-2"><a href="{%url 'create' %}">나의 할 일 추가하기</a></button>
+                    </div>
+                    
+                  </form>
+                 
+                  <ul class="list-group mb-0">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                      <div class="d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                         {{todolist.todo_title}}
+                      </div>
+                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                        <i class="fas fa-times text-primary"></i>
+                      </a>
+                   
+                    </li>
+    
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                      <div class="d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        URL주소: <a href="{{todolist.todo_url}}">{{todolist.todo_url}}</a>
+                      </div>
+                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                        <i class="fas fa-times text-primary"></i>
+                      </a>
+                   
+                    </li>
+    
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                      <div class="d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        우선순위:  {{todolist.todo_priority}}
+                      </div>
+                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                        <i class="fas fa-times text-primary"></i>
+                      </a>
+                   
+                    </li>
+    
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                      <div class="d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                        완료여부:  {{todolist.todo_completion}}
+                      </div>
+                      <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                        <i class="fas fa-times text-primary"></i>
+                      </a>
+                   
+                    </li>
+                    
+                 
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    
+</body>
+</html>
